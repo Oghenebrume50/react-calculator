@@ -1,17 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class Display extends Component {
-  render(){
-    return(
-      <div className="display">
-        <div>
-          {this.props.result}
-        </div>
+const Display = () => {
+  return(
+    <div className="display">
+      <div>
+        {this.props.result}
       </div>
-
-    );
-  }
+    </div>
+  );
 }
 
 Display.propTypes = {
