@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Display = () => {
+const Display = (props) => {
   return(
     <div className="display">
       <div>
-        {this.props.result}
+        {props.result}
       </div>
     </div>
   );

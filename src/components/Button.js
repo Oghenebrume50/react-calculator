@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = () => {
+const Button = (props) => {
   return(
     <div className="button-name">
       <button>
-        {this.props.name}
+        {props.name}
       </button>
     </div>
   );
