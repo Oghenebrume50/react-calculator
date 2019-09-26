@@ -1,13 +1,13 @@
-import {React, component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Button extends component {
+class Button extends Component {
   render(){
     return(
       <div className="button-name">
-        <div>
+        <button>
           {this.props.name}
-        </div>
+        </button>
       </div>
 
     );

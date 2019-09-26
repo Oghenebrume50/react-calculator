@@ -1,7 +1,7 @@
-import {React, component} from 'react';
+import React, { Component } from 'react';
 import Button from './Button';
 
-class ButtonPanel extends component {
+class ButtonPanel extends Component {
   render(){
     return(
       <div className="button-panel">
