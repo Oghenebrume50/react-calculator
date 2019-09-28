@@ -3,6 +3,8 @@
   flex-direction: column;
   justify-content: space-around;
   width: 750px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .display {
@@ -14,6 +16,39 @@
 }
 
 .button-panel {
+  display: flex;
+  flex-direction: column;
   height: 100px;
+}
+
+.button-panel > div {
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+}
+
+.button {
+  width: 25%;
+}
+
+.wide {
+  width: 50%;
+}
+
+button {
+  padding: 10% 90px;
+  border: 2px solid grey;
+  flex: 1 0 auto;
+  font-size: 1.5em;
+  font-weight: 400;
+  width: 100%;
+}
+
+.button-wide {
+  padding: 5% 90px;
+}
+
+.orange {
+  background-color: orange;
 }
 
