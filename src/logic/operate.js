@@ -19,6 +19,9 @@ const operate = (numberOne, numberTwo, operator) => {
   else if (operator === '%') {
     return first.mod(second).toString();
   }
+  else {
+    throw Error(`Unknown operation ${operator}`);
+  }
 }
 
 export default operate;
