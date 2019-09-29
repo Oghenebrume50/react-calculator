@@ -1,40 +1,45 @@
 import React from 'react';
 import Button from './Button';
 
-const ButtonPanel = () => {
-  return(
-    <div className="button-panel">
-      <div>
-        <Button name='AC' />
-        <Button name='+/-' />
-        <Button name='%' />
-        <Button name='/' orange/>
+class ButtonPanel extends React.Component {
+  clickHandler = (buttonName) => {
+    this.props.clickHandler(buttonName);
+  }
+  render() {
+    return(
+      <div className="button-panel">
+        <div>
+          <Button name='AC' clickHandler={this.clickHandler}/>
+          <Button name='+/-' clickHandler={this.clickHandler} />
+          <Button name='%' clickHandler={this.clickHandler}/>
+          <Button name='/' clickHandler={this.clickHandler} orange/>
+        </div>
+        <div>
+          <Button name='7' clickHandler={this.clickHandler}/>
+          <Button name='8' clickHandler={this.clickHandler}/>
+          <Button name='9' clickHandler={this.clickHandler}/>
+          <Button name='*' clickHandler={this.clickHandler} orange/>
+        </div>
+        <div>
+          <Button name='4' clickHandler={this.clickHandler}/>
+          <Button name='5' clickHandler={this.clickHandler}/>
+          <Button name='6' clickHandler={this.clickHandler}/>
+          <Button name='-' clickHandler={this.clickHandler} orange/>
+        </div>
+        <div>
+          <Button name='1' clickHandler={this.clickHandler}/>
+          <Button name='2' clickHandler={this.clickHandler}/>
+          <Button name='3' clickHandler={this.clickHandler}/>
+          <Button name='+' clickHandler={this.clickHandler} orange/>
+        </div>
+        <div>
+          <Button name='0' clickHandler={this.clickHandler} wide/>
+          <Button name='.' clickHandler={this.clickHandler}/>
+          <Button name='=' clickHandler={this.clickHandler} orange/>
+        </div>
       </div>
-      <div>
-        <Button name='7' />
-        <Button name='8' />
-        <Button name='9' />
-        <Button name='*' orange/>
-      </div>
-      <div>
-        <Button name='4' />
-        <Button name='5' />
-        <Button name='6' />
-        <Button name='-' orange/>
-      </div>
-      <div>
-        <Button name='1' />
-        <Button name='2' />
-        <Button name='3' />
-        <Button name='+' orange/>
-      </div>
-      <div>
-        <Button name='0' wide/>
-        <Button name='.' />
-        <Button name='=' orange/>
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default ButtonPanel;
