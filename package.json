@@ -9,10 +9,12 @@
     "react-scripts": "3.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "yarn sass:build && react-scripts build",
+    "eject": "react-scripts eject",
+    "sass:watch": "node-sass -w src/styles/scss -o src/styles/css",
+    "sass:build": "node-sass src/styles/scss -o src/styles/css --source-map true",
+    "start": "yarn run sass:build && react-scripts start",
+    "test": "react-scripts test --env=jsdom"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,5 +30,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
   }
 }
