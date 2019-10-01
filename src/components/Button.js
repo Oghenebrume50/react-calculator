@@ -1,24 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = (props) => {
-  const style = {
-    background: props.color,
-    padding: props.wide !== '25%' ? '5% 70px' : '10% 70px',
+class Button extends React.Component {  
+  handleClick = () => {
+    this.props.clickHandler(this.props.name);
   }
 
-  const btnDivStyle = {
-    width: props.wide,
-  }
+  render(){
+    const style = {
+      background: this.props.color,
+      padding: this.props.wide !== '25%' ? '5% 70px' : '10% 70px',
+    }
+  
+    const btnDivStyle = {
+      width: this.props.wide,
+    }
 
-  return(
-    
-    <div style={btnDivStyle}>
-      <button style={style}>
-        {props.name}
-      </button>
-    </div>
-  );
+    return(
+      <div style={btnDivStyle}>
+        <button 
+        style={style}
+        onClick={this.handleClick}>
+          {this.props.name}
+        </button>
+      </div>
+    );
+  }
 }
 
 Button.propTypes = {

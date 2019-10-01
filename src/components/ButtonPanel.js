@@ -1,40 +1,45 @@
 import React from 'react';
 import Button from './Button';
 
-const ButtonPanel = () => {
-  return(
-    <div className="button-panel">
-      <div>
-        <Button name='AC' color='grey' />
-        <Button name='+/-' color='grey' />
-        <Button name='%' color='grey' />
-        <Button name='/' />
+class ButtonPanel extends React.Component {
+  clickHandler = (buttonName) => {
+    this.props.clickHandler(buttonName);
+  }
+  render() {
+    return(
+      <div className="button-panel">
+        <div>
+          <Button name='AC' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='+/-' color='grey' clickHandler={this.clickHandler} />
+          <Button name='%' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='/' clickHandler={this.clickHandler} />
+        </div>
+        <div>
+          <Button name='7' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='8' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='9' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='*' clickHandler={this.clickHandler} />
+        </div>
+        <div>
+          <Button name='4' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='5' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='6' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='-' clickHandler={this.clickHandler} />
+        </div>
+        <div>
+          <Button name='1' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='2' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='3' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='+' clickHandler={this.clickHandler} />
+        </div>
+        <div>
+          <Button name='0' color='grey' clickHandler={this.clickHandler} wide='50%'/>
+          <Button name='.' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='=' clickHandler={this.clickHandler} />
+        </div>
       </div>
-      <div>
-        <Button name='7' color='grey' />
-        <Button name='8' color='grey' />
-        <Button name='9'color='grey'  />
-        <Button name='*' />
-      </div>
-      <div>
-        <Button name='4'color='grey'  />
-        <Button name='5' color='grey' />
-        <Button name='6' color='grey' />
-        <Button name='-' />
-      </div>
-      <div>
-        <Button name='1' color='grey' />
-        <Button name='2' color='grey' />
-        <Button name='3' color='grey' />
-        <Button name='+' />
-      </div>
-      <div>
-        <Button name='0' color='grey' wide='50%'/>
-        <Button name='.' color='grey' />
-        <Button name='=' />
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default ButtonPanel;
