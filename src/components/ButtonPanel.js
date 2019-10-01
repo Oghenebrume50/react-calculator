@@ -9,33 +9,33 @@ class ButtonPanel extends React.Component {
     return(
       <div className="button-panel">
         <div>
-          <Button name='AC' clickHandler={this.clickHandler}/>
-          <Button name='+/-' clickHandler={this.clickHandler} />
-          <Button name='%' clickHandler={this.clickHandler}/>
-          <Button name='/' clickHandler={this.clickHandler} orange/>
+          <Button name='AC' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='+/-' color='grey' clickHandler={this.clickHandler} />
+          <Button name='%' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='/' clickHandler={this.clickHandler} />
         </div>
         <div>
-          <Button name='7' clickHandler={this.clickHandler}/>
-          <Button name='8' clickHandler={this.clickHandler}/>
-          <Button name='9' clickHandler={this.clickHandler}/>
-          <Button name='*' clickHandler={this.clickHandler} orange/>
+          <Button name='7' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='8' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='9' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='*' clickHandler={this.clickHandler} />
         </div>
         <div>
-          <Button name='4' clickHandler={this.clickHandler}/>
-          <Button name='5' clickHandler={this.clickHandler}/>
-          <Button name='6' clickHandler={this.clickHandler}/>
-          <Button name='-' clickHandler={this.clickHandler} orange/>
+          <Button name='4' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='5' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='6' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='-' clickHandler={this.clickHandler} />
         </div>
         <div>
-          <Button name='1' clickHandler={this.clickHandler}/>
-          <Button name='2' clickHandler={this.clickHandler}/>
-          <Button name='3' clickHandler={this.clickHandler}/>
-          <Button name='+' clickHandler={this.clickHandler} orange/>
+          <Button name='1' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='2' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='3' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='+' clickHandler={this.clickHandler} />
         </div>
         <div>
-          <Button name='0' clickHandler={this.clickHandler} wide/>
-          <Button name='.' clickHandler={this.clickHandler}/>
-          <Button name='=' clickHandler={this.clickHandler} orange/>
+          <Button name='0' color='grey' clickHandler={this.clickHandler} wide='50%'/>
+          <Button name='.' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='=' clickHandler={this.clickHandler} />
         </div>
       </div>
     );
