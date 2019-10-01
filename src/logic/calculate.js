@@ -20,12 +20,22 @@ const calculate = (dataObject, buttonName) => {
   }
 
   if (isNum(buttonName)) {
+    if (buttonName === '0' && dataObject.next === '0') {
+      return {total: null, next:null, operation: null};
+    }
     if (dataObject.operation) {
       if (dataObject.next) {
         return { next: dataObject.next + buttonName };
       }
       return { next: buttonName };
     }
+    if (dataObject.next) {
+      return {
+        next: dataObject.next + buttonName,
+        total: null,
+      };
+    }
+
     return {
       next: buttonName,
       total: null,
@@ -41,6 +51,7 @@ const calculate = (dataObject, buttonName) => {
         operation: null,
       };
     }
+    return {};
   }
 
   if (buttonName === '.') {
