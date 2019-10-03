@@ -73,6 +73,11 @@ const calculate = (dataObject, buttonName) => {
     };
   }
 
+  if (dataObject.total && !dataObject.next) {
+    return { operation: buttonName };
+  }
+
+
   return {
     total: dataObject.next,
     next: null,
